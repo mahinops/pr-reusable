@@ -2,6 +2,7 @@ name: Reuse Workflow
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+  push:
 
 
 jobs:
@@ -10,6 +11,6 @@ jobs:
     steps:
       - name: Test Reusable Workflow
         uses: mahinops/pr-summary-message@testpr
-        
+
       - name: Test
         run: echo "hello"
