@@ -1,10 +1,16 @@
 name: Reuse Workflow
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
   push:
+    branches: ['*']
 
 
 jobs:
   test:
-    uses: mahinops/pr-summary-message@testpr
+    name: PR Number
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Print PR Number
+        run: echo ${{ github.event.number }}
