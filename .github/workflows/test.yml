@@ -1,0 +1,13 @@
+name: Reuse Workflow
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Reusable Workflow
+        uses: mahinops/pr-summary-message@testpr
+    
