@@ -4,7 +4,8 @@ on:
     types: [opened, synchronize, reopened]
   push:
 
-
 jobs:
   test:
-    uses: mahinops/pr-summary-message@testpr
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mahinops/pr-summary-message@testpr
