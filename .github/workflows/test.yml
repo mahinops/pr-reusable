@@ -10,4 +10,6 @@ jobs:
     steps:
       - name: Test Reusable Workflow
         uses: mahinops/pr-summary-message@testpr
-    
+        
+      - name: Test
+        run: echo "hello"
